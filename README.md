@@ -18,7 +18,15 @@
 Код обучения: [train_notebook.ipynb](train_notebook.ipynb).
 
 Веса моделей: [https://disk.yandex.ru/d/gMLzPNPF3GnfaQ](https://disk.yandex.ru/d/gMLzPNPF3GnfaQ)
+#### 2.2. Sentence-transformer
 
+В данном подходе попробовали fine-tune модели [distilbert-base-nli-mean-tokens](https://huggingface.co/sentence-transformers/distilbert-base-nli-mean-tokens).
+
+После дообучения в 10 эпох (больше не позволил colab) получили результаты: [binary_classification_evaluation_results.csv](binary_classification_evaluation_results.csv)
+
+Код обучения: [sentence_transformers.ipynb](sentence_transformers.ipynb).
+
+Веса моделей: [Google Drive](https://drive.google.com/drive/folders/1-oRgvgJUiggIQodD5NvB_2u84ulzTTgm?usp=sharing)
 
 ### 3. Инференс
 Создаем базу эмбеддиногов полученных из наименований компаний за счет Bert FeatureExtractor. Для любого нового наименования применяем faiss для поиска 5 наиболее похожих наименований из базы.
